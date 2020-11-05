@@ -12,7 +12,7 @@ def add_to_env(length):
     for our secret key
     """
     with open('.env', 'w+') as file: 
-        database_url = 'postgresql)+psycopg2://{user}:{pw}@{url}/{db}'.format(user='postgres', pw ='Aug253091!', url = '127.0.0.1:5432', db ='acme_corp')
+        database_url = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user='postgres', pw ='Aug253091!', url = '127.0.0.1:5432', db ='acme_corp')
         data = file.read()
         file.seek(0)
         all_letters = string.ascii_lowercase
