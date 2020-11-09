@@ -30,7 +30,7 @@ class Employee(db.Model):
 class EmployeeSchema(ma.Schema):
     class Meta:
         # Fields to show in output
-        fields = ["id", "full_name","gender","address","ssn","email"]
+        fields = ["id", "full_name", "job", "gender","address","ssn","email"]
 
 employee_schema = EmployeeSchema()
 staff_schema = EmployeeSchema(many = True)
@@ -51,7 +51,8 @@ class User(db.Model,UserMixin):
 
     def __init__(self,name,email,password,id = id):
         self.id = str(uuid.uuid4())
-        self.name = nameself.email= email
+        self.name = name
+        self.email = email
         self.password = self.set_password(password)
 
     def set_password(self,password):

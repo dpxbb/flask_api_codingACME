@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+​
+{% block content %}
+​
+    <div class="container">
+        <h1>Welcome to the ACME Corporation</h1>
+        <h3>Register Below</h3>
+        <a href="{{ url_for('register') }}">
+            <button class="btn btn-success">Register Here!</button>
+        </a>
+    </div>
+​
+{% endblock content %}
